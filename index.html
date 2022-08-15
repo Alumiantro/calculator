@@ -8,69 +8,72 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <main>
-        <div class="container">
-            <h1 class="head">Поможем в рассчетах всего, что нужно для жизни</h1>
-            <div class="tabs-container">
-                <ul class="tabs">
-                    <li>
-                        <a href="#">Обычный калькулятор</a>
-                    </li>
-                    <li class="active">
-                        <a href="#">Калькулятор валют</a>
-                    </li>
-                    <li>
-                        <a href="#">Калькулятор по вкладу</a>
-                    </li>
-                </ul>
-                <div class="tabs-content">
-                    <div class="tabs-panel" data-index="0">
-                        <p>PArt 1</p>
-                    </div>
-                    <div class="tabs-panel active" data-index="1">
-                        <div class="cur-convert">
-                            <div class="cur-convert__item">
-                                <div class="currency">
-                                    <label for="cur-convert_select" class="currency-name">У меня есть</label>
-                                    <select name="currency" id="cur-convert_select" class="currency-select">
-                                        <option value="RUB" selected>RUB</option>
-                                        <option value="USD">USD</option>
-                                        <option value="EUR">EUR</option>
-                                        <option value="GBP">GBP</option>
-                                    </select>
-                                </div>
-                                <div class="input-box">
-                                    <input type="text" class="input-box__input" value="5 000">
-                                    <div class="input-box__rate">1 RUR = 0.0166 USD</div>
-                                </div>
-                            </div>
-                            <div class="cur-convert__item">
-                                <div class="currency">
-                                    <label for="cur-convert_select" class="currency-name">Хочу приобрести</label>
-                                    <select name="currency" id="cur-convert_select" class="currency-select">
-                                        <option value="RUB" selected>RUB</option>
-                                        <option value="USD">USD</option>
-                                        <option value="EUR">EUR</option>
-                                        <option value="GBP">GBP</option>
-                                    </select>
-                                </div>
-                                <div class="input-box">
-                                    <input type="text" class="input-box__input" value="5 000">
-                                    <div class="input-box__rate">1 RUR = 0.0166 USD</div>
-                                </div>
-                            </div>
+        <div class="card">
+            <div class="container">
+                <h1>We will help you with the calculation of everything you need for life</h1>
+                <div class="tabs-container">
+                    <ul class="tabs">
+                        <li>
+                            <a class="tab-item tab-item_active" href="#">Ordinary calculator</a>
+                        </li>
+                        <li>
+                            <a class="tab-item" href="#">Currency converter</a>
+                        </li>
+                        <li>
+                            <a class="tab-item" href="#">Deposit calculator</a>
+                        </li>
+                    </ul>
+                    <div class="tabs-content">
+                        <div class="tabs-panel tabs-panel_active" data-index="0">
+                            <p>Part 1</p>
                         </div>
-                    </div>
-                    <div class="tabs-panel" data-index="2">
-                        <p>PArt 3</p>
+                        <div class="tabs-panel" data-index="1">
+                            <form action="#" class="currency-converter">
+                                <div class="currencies">
+                                    <div class="currency">
+                                        <label class="currency-label" for="sc1">I have
+                                        </label>
+                                        <select name="selected-currency" id="sc1">
+                                            <option selected value="RUB">RUB</option>
+                                            <option value="USD">USD</option>
+                                            <option value="EUR">EUR</option>
+                                        </select>
+                                    </div>
+                                    <div class="currency">
+                                        <label class="currency-label" for="sc2">I want
+                                        </label>
+                                        <select name="selected-currency" id="sc2">
+                                            <option value="RUB">RUB</option>
+                                            <option selected value="USD">USD</option>
+                                            <option value="EUR">EUR</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="values">
+                                    <input type="number" name="amount-currency" value="1000" class="input-currency">
+                                    <input type="text" name="result-currency" value="30" class="input-currency" readonly>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tabs-panel" data-index="2">
+                            <p>Part 3</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>

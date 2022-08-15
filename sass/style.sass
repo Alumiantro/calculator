@@ -1,28 +1,85 @@
+*
+    font-family: 'Roboto'
+    font-weight: 400
+body
+    background-color: #f4f4f4
+.card
+    background-color: #fff
+    max-width: 1000px
+    margin: 0 auto
+    margin-top: 100px
+    padding: 100px
 .container
     max-width: 1100px
     padding: 0px 15px
     margin: 0 auto
 h1
-    margin-top: 100px
+    margin: 0 auto
     text-align: center
+    font-family: 'DynaPuff'
+    font-weight: 400
+    letter-spacing: 0.03em
+    font-size: 45px
+    line-height: 120%
+    color: #3A41E0
+    max-width: 700px
 .tabs
     display: flex
-    gap: 10px
+    gap: 15px
     justify-content: center
+    margin-top: 60px
 .tabs-content
     margin-top: 50px
 li a
-    background: #fff
+    text-decoration: none
+    font-family: 'DynaPuff'
+    font-weight: 400
+    letter-spacing: 0.03em
+    background: #f5f5f5
     border-radius: 5px
-    padding: 10px 20px
-li.active a
-    background: #833AE0
-    color: #FFFFFF
+    padding: 15px 30px
+    color: #9F9F9F
+.tab-item_active
+    font-family: 'DynaPuff'
+    background: #e0e2fd
+    color: #4b4f9e
 .cur-convert
     display: flex
     gap: 50px
     justify-content: center
 .tabs-panel
     display: none
-.active
+.tabs-panel_active
     display: block
+.currencies
+    display: flex
+    gap: 40px
+    justify-content: center
+.currency
+    display: flex
+    flex-direction: column
+    gap: 10px
+.currency-label
+    font-weight: 400
+    font-size: 16px
+    line-height: 120%
+    color: #9F9F9F
+select
+    width: 250px
+    height: 40px
+    padding: 10px
+    border: 1px solid #ced4da
+    appearance: none
+    background: url('../img/icon/down.svg') no-repeat right
+    background-position-x: calc(100% - 8px)
+    color: #6c6c6c
+.values
+    display: flex
+    justify-content: center
+    gap: 40px
+    margin-top: 20px
+.input-currency
+    width: 250px
+    height: 40px
+    padding: 10px
+    border: 1px solid #ced4da
